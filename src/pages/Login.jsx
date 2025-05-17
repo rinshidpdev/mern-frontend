@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../utils/Api"; // Assuming this is a .js file
+import API from "../utils/api"; // Assuming this is a .js file
 import "./AuthForm.css";
 
 const Login = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../utils/Api";
+import API from "../utils/api";
 import "./../styles/AddModal.css";
 
 const AddCategoryModal = ({ onClose, onSuccess }) => {

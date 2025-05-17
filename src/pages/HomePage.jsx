@@ -6,7 +6,7 @@ import Pagination from "../components/Pagination";
 import AddProductModal from "../components/AddProductModal";
 import AddCategoryModal from "../components/AddCategoryModal";
 import AddSubCategoryModal from "../components/AddSubCategoryModal";
-import API from "../utils/Api";
+import API from "../utils/api";
 import { SearchContext } from "../context/SearchContext";
 import "./HomePage.css";
 

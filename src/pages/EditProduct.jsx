@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import API from "../utils/Api";
+import API from "../utils/api";
 import "./../styles/EditProduct.css";
 
 const EditProduct = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import API from "../utils/Api";
+import API from "../utils/api";
 import "./../styles/WishlistDrawer.css";
 
 const WishlistDrawer = ({ isOpen, onClose }) => {

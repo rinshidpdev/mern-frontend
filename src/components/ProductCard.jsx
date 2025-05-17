@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiHeart, FiStar } from "react-icons/fi";
 import "./ProductCard.css";
-import API from "../utils/Api";
+import API from "../utils/api";
 
 const ProductCard = ({ product }) => {
   const handleWishlist = async (e) => {
