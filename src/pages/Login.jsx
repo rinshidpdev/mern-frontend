@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import API from "../utils/api"; // Assuming this is a .js file
+import { useNavigate } from "react-router-dom";
+import API from "../utils/api"; // Assuming this is your API helper
 import "./AuthForm.css";
 
 const Login = () => {
