@@ -41,7 +41,7 @@
 // };
 
 // export default SidebarFilters;
-// ✅ UPDATED SIDEBARFILTERS TO WORK WITH SUBCATEGORY FILTERING
+
 import React, { useEffect, useState } from "react";
 import API from "../utils/api";
 import "./Sidebar.css";
