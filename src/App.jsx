@@ -10,7 +10,7 @@
 // }
 
 // export default App
-import { BrowserRouter as Router, Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -21,8 +21,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-  <BrowserRouter>
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -60,11 +59,9 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* Catch all routes to redirect to dashboard if logged in */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </Router>
-    </BrowserRouter>
+    </>
   );
 }
 
