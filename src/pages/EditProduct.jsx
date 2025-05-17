@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, } from "react-router-dom";
 import API from "../utils/api";
 import "./../styles/EditProduct.css";
 
 const EditProduct = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+
 
   const [product, setProduct] = useState(null);
   const [variants, setVariants] = useState([]);

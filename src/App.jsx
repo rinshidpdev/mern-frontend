@@ -10,7 +10,7 @@
 // }
 
 // export default App
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -21,6 +21,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
+  <BrowserRouter>
     <Router>
       <Navbar />
       <Routes>
@@ -63,6 +64,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
+    </BrowserRouter>
   );
 }
 
