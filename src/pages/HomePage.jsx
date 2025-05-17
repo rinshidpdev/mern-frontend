@@ -1,4 +1,4 @@
-// ✅ UPDATED HOMEPAGE with CONTEXT-BASED SEARCH
+// ✅ UPDATED HOMEPAGE with CONTEXT-BASED SEARCH (Safe version)
 import React, { useEffect, useState, useContext } from "react";
 import ProductCard from "../components/ProductCard";
 import SidebarFilters from "../components/SidebarFilters";
@@ -31,10 +31,14 @@ const HomePage = () => {
           page,
         },
       });
-      setProducts(res.data.products);
-      setTotal(res.data.total);
+
+      console.log("API response:", res.data); // ✅ Debug: see the response
+
+      setProducts(res.data.products || []); // ✅ fallback if undefined
+      setTotal(res.data.total || 0);
     } catch (err) {
       console.error("Failed to fetch products", err);
+      setProducts([]); // ✅ Optional: clear products on error
     }
   };
 
@@ -69,9 +73,13 @@ const HomePage = () => {
         </div>
 
         <div className="product-grid">
-          {products.map((prod) => (
-            <ProductCard key={prod._id} product={prod} />
-          ))}
+          {products.length === 0 ? (
+            <p>No products found.</p>
+          ) : (
+            products.map((prod) => (
+              <ProductCard key={prod._id} product={prod} />
+            ))
+          )}
         </div>
 
         <Pagination
